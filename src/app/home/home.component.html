@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+     <div class="col-md-12">
+        <p class="_bold">Vous etes administarteur / utilisateur </p>
+     
+        <div class="custom-control custom-radio custom-control-inline">
+          <input type="radio" value="user" class="custom-control-input" [checked]="true" (click)="chooseType('user')" id="defaultInline1" name="inlineDefaultRadiosExample" mdbInputDirective>
+          <label class="custom-control-label" for="defaultInline1">User</label>
+        </div>
+
+      
+        <div class="custom-control custom-radio custom-control-inline">
+          <input type="radio" value="admin" class="custom-control-input" [checked]="false" (click)="chooseType('admin')"  id="defaultInline2" name="inlineDefaultRadiosExample" mdbInputDirective>
+          <label class="custom-control-label" for="defaultInline2">Admin</label>
+        </div>
+     </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 list-btns">
+       <button mdbBtn type="button" color="indigo" (click)="goToList()"  mdbWavesEffect>voir la liste</button>
+    </div> 
+  </div>
+</div>

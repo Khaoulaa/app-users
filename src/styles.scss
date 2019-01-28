@@ -1,1 +1,66 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+.nav{
+    padding: 15px 35px 15px 35px;
+    border: 1px solid #162988;
+    background-color: #162988;
+    color: #fff;
+    position: relative;
+
+    li:last-child{
+        position: absolute;
+        right: 30px;
+        top: 25px;
+       input{
+         border-radius: 3px;
+         border: 1px solid #ccc;
+         font-size: 17px;
+           @media(max-width : 992px)
+            {
+                width: 133px ;
+            }
+        }
+  
+    }
+    li:first-child{
+        a{
+          color: #fff;
+          font-size: 23px;
+          font-weight: 600;
+        }
+        
+    }
+}
+
+.container{
+    padding: 35px;
+    text-align: center;
+    ._bold{
+        font-weight: 600;
+    }
+    .list-btns{
+        padding: 30px;
+    }
+}
+.content-modal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 15px;
+      .container-img{
+        width: 160px ;
+        min-width: 160px;
+        border-radius: 50%;
+        border: 2px solid #ccc;
+        img{
+            width: 100%;
+            max-width: 160px;
+            border-radius: 50%;
+            padding: 5px;
+        }
+    } 
+      ._bold{
+        font-weight: 600;
+    }
+   } 

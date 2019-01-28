@@ -1,20 +1,19 @@
-<ul class="nav">
-    <li class="nav-item">
-        <a class="nav-link active" href="#!">ListUsers</a>
-    </li>
-      <li>
- 
-<input [(ngModel)]="asyncSelected"
-       [typeaheadAsync]="true"
-       [typeahead]="dataSource"
-       (typeaheadLoading)="changeTypeaheadLoading($event)"
-       (typeaheadOnSelect)="typeaheadOnSelect($event)"
-       [typeaheadOptionsLimit]="7"
-       typeaheadOptionField="login"
-       placeholder="Recherche ..."
-       class="form-control">
-     </li>
-</ul>
+<div class="container">
+  <div class="row">
+      <div class="col-md-4 offset-md-1 section-4 " *ngFor="let user of users">
+          <div class="container-img">
+             <img [src]="user.avatar_url">
+          </div> 
+          <p> {{user.login}}</p>
+          <div class="row">
+             <div class="col-md-12 ">
+                <button *ngIf="type === 'admin'" mdbBtn (click)="showDetailsUser(user.login)" type="button" color="indigo" mdbWavesEffect>voir +</button>
+              </div> 
+          </div>
+
+     </div>
+  </div>
+
 
 
   <div mdbModal #detailsModal="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel" aria-hidden="true">
@@ -43,4 +42,4 @@
     </div>
   </div>
 </div>
-<router-outlet></router-outlet>
+</div>  
